@@ -1,0 +1,71 @@
+<ion-header [translucent]="true" class="header">
+  <ion-toolbar>
+    <div class="logo-container">
+      <img class="trello-logo" src="../../../assets/app/trello-logo.png" alt="trello-logo">
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="row">
+    <div class="main-title-container">
+      <img class="join-us-icon" src="../../../assets/app/svg/join-us.svg" alt="join-us-icon">
+      <h4 class="main-title">Haz avanzar a tus equipos... estén donde estén</h4>
+    </div>
+  
+    <!-- Sección de Registro -->
+    <div class="custom-select-container">
+      <!-- Botón para activar el action-sheet de registro -->
+      <button id="register-button" (click)="toggleActionSheet(false)">Registrarse</button>
+    </div>
+
+    <!-- Sección de Login -->
+    <div class="custom-select-container">
+      <!-- Botón para activar el action-sheet de login -->
+      <button id="login-button" (click)="toggleActionSheet(true)">Iniciar Sesión</button>
+    </div>
+
+    <!-- Fondo superpuesto, visible solo cuando el action-sheet está visible -->
+    <div id="overlay" [class.hidden]="isActionSheetHidden" [ngClass]="{'overlay-visible': overlayVisible}" (click)="closeActionSheet()"></div>
+
+    <!-- Action sheet para las opciones de registro/inicio de sesión -->
+    <div id="action-sheet" [class.hidden]="isActionSheetHidden" [ngClass]="actionSheetAnimation">
+      <div class="action-sheet-options">
+        <button class="option" [routerLink]="isLogin ? '/login' : '/register'">
+          <ion-icon class="img-icons" name="mail-outline"></ion-icon>
+          <ion-label class="text-option">{{ isLogin ? 'Iniciar sesión con el correo electrónico' : 'Registrarse con el correo electrónico' }}</ion-label>
+        </button>
+        <button class="option" (click)="selectOption(2, 'Google')">
+          <img class="img-icons" src="../../../assets/app/svg/google.svg" alt="google-logo">
+          <ion-label class="text-option">{{ isLogin ? 'Iniciar sesión con Google' : 'Registrarse con Google' }}</ion-label>
+        </button>
+        <button disabled class="option" (click)="selectOption(3, 'Microsoft')">
+          <img class="img-icons microsoft-icon" src="../../../assets/app/svg/microsoft.svg" alt="microsoft-logo">
+          <ion-label class="text-option" style="text-decoration: line-through;">
+            {{ isLogin ? 'Iniciar sesión con Microsoft' : 'Registrarse con Microsoft' }}
+          </ion-label>
+        </button>
+        <button disabled class="option" (click)="selectOption(3, 'Apple')">
+          <img class="img-icons" src="../../../assets/app/svg/apple.svg" alt="apple-logo">
+          <ion-label class="text-option" style="text-decoration: line-through;">
+            {{ isLogin ? 'Iniciar sesión con Apple' : 'Registrarse con Apple' }}
+          </ion-label>
+        </button>
+      </div>
+    </div>
+
+    <div class="footer-container">
+      <ion-label class="footer-text">
+        Al registrarte, aceptas nuestras 
+          <a href="https://www.atlassian.com/legal/atlassian-customer-agreement#intro">
+            Condiciones del Servicio
+          </a> 
+        y nuestra 
+          <a href="https://www.atlassian.com/legal/privacy-policy#what-this-policy-covers">
+            Políticas de Privacidad
+          </a>
+      </ion-label>
+      <ion-label class="contact-support-label"><a href="https://support.atlassian.com/contact/">Contactar con el servicio de asistencia</a></ion-label>
+    </div>
+  </div>
+</ion-content>

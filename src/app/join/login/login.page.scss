@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+* {
+    --background: #ffffff;
+    font-family: 'Poppins';
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Sección Header */
+.header {
+    --background: #fffff;
+    box-shadow: none;
+}
+
+ion-toolbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.trello-logo {
+    margin-top: 2vh;
+    width: 125px;
+    height: auto;
+}
+
+/* Sección Body */
+.main-container, .form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.login-title {
+    font-size: 14px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+}
+
+.login-input {
+    margin-top: 1.5vh;
+    margin-bottom: 1.5vh;
+    min-height: 4vh;
+    text-align: left;
+    width: 78%;
+    --placeholder-color: gray;
+}
+
+.login-input::placeholder {
+    font-size: 12px !important;
+}
+
+.terms-conditions-text {
+    text-align: left;
+    width: 78%;
+    font-size: 12px;
+    margin-bottom: 1vh;
+}
+
+.terms-conditions-text a {
+    color: #124ae2;
+    text-decoration: none;
+}
+
+#login-button {
+    width: 78%;
+    padding: 12px;
+    cursor: pointer;
+    border-radius: 3px;
+    display: flex;
+    letter-spacing: 1px;
+    font-size: 12px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+    background-color: #0055CC;
+}
+
+/* Otras opciones */
+.other-options {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 2vh;
+}
+
+.other-text {
+    color: #42526E;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 2vh;
+}
+
+.other-button {
+    width: 78%;
+    border: 1px solid gray;
+    border-radius: 2px;
+    margin-bottom: 2vh;
+}
+
+.logo-button {
+    width: 25px;
+    height: auto;
+    margin-right: 1vh;
+}
+
+.other-text-button {
+    font-size: 15px;
+    font-weight: bold;
+    color: #000;
+    text-transform: none;
+}
+
+.another-account {
+    font-size: 13px;
+    width: 70%;
+}
+
+.linea {
+    width: 78%;
+    border: none;
+    border-top: 0.5px solid rgb(161, 161, 161);
+    margin: 0;
+    margin-bottom: 3vh; 
+}
+
+/* Sección Footer */
+.footer-container {
+    position: absolute;
+    bottom: 0; 
+    left: 0;
+    width: 100%; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-size: 10px;
+    padding: 10px 0;
+}
+
+.atlassian-logo {
+    width: auto;
+    height: auto;
+    margin-bottom: 1vh;
+}
+
+.footer-text {
+    width: 70%;
+}
+
+.footer-text a {
+    color: #124ae2;
+    text-decoration: none;
+}

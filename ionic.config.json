@@ -1,0 +1,7 @@
+{
+  "name": "Trellok-All",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

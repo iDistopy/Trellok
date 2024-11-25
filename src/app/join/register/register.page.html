@@ -1,0 +1,65 @@
+<ion-header [translucent]="true" class="header">
+  <ion-toolbar>
+    <div class="logo-container">
+      <img class="trello-logo" src="../../../assets/app/trello-logo-colored.png" alt="trello-logo">
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="row">
+    <div class="main-container">
+      <h4 class="register-title">Regístrate para continuar</h4>
+      <form [formGroup]="registerForm" (ngSubmit)="onRegister()" class="form-container">
+        <ion-label>Email</ion-label>
+        <ion-input formControlName="email" class="register-input" fill="outline" type="email" placeholder="Ingresa tu correo electrónico"></ion-input>
+        <ion-label>Contraseña</ion-label>
+        <ion-input formControlName="password" class="register-input" fill="outline" type="password" placeholder="Ingresa tu contraseña"></ion-input>
+        <ion-label class="terms-conditions-text">
+          Al registrarme, acepto las
+          <a href="https://www.atlassian.com/legal/atlassian-customer-agreement#intro">Condiciones del servicio</a>
+          de Atlassian Cloud y su
+          <a href="https://www.atlassian.com/legal/privacy-policy#what-this-policy-covers">Política de privacidad</a>.
+        </ion-label>
+        <button type="submit" id="register-button">Registrarse</button>
+      </form>
+    </div>    
+
+    <div class="other-options">
+      <ion-label class="other-text">O continúa con:</ion-label>
+      <ion-button id="google-button" class="other-button">
+        <img class="logo-button" src="../../../assets/app/svg/google.svg" alt="google-logo">
+        <ion-label class="other-text-button">Google</ion-label>
+      </ion-button>
+      <ion-button disabled class="other-button">
+        <img class="logo-button" src="../../../assets/app/svg/microsoft.svg" alt="microsoft-logo">
+        <ion-label class="other-text-button">Microsoft</ion-label>
+      </ion-button>
+      <ion-button disabled class="other-button">
+        <img class="logo-button" src="../../../assets/app/svg/apple.svg" alt="apple-logo">
+        <ion-label class="other-text-button">Apple</ion-label>
+      </ion-button>
+      <ion-button disabled class="other-button">
+        <img class="logo-button" src="../../../assets/app/svg/slack.svg" alt="slack-logo">
+        <ion-label class="other-text-button">Slack</ion-label>
+      </ion-button>
+      <a class="another-account" [routerLink]="['/login']">¿Ya tienes una cuenta de Atlassian? Iniciar sesión</a>
+    </div>
+
+    <div class="footer-container">
+      <hr class="linea">
+      <img class="atlassian-logo" src="../../../assets/app/svg/atlassian.svg" alt="atlassian-logo">
+      <ion-label>
+        Una cuenta para Trello, Jira, Confluence y
+        <a href="https://support.atlassian.com/atlassian-account/docs/what-is-an-atlassian-account/">más</a>.
+      </ion-label>
+      <ion-label class="footer-text">
+        Este sitio está protegido por reCAPTCHA, y se aplican la
+        <a href="https://policies.google.com/privacy">política de privacidad</a> 
+        y las
+        <a href="https://policies.google.com/terms">condiciones de servicio</a>
+        de Google.
+      </ion-label>
+    </div>
+  </div>
+</ion-content>

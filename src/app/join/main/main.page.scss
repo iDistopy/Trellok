@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+* {
+    --background: #124ae2;
+    font-family: 'Poppins';
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Sección Header */
+.header {
+    --background: transparent;
+    box-shadow: none;
+  }
+  
+  ion-toolbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .trello-logo {
+    width: 125px;
+    height: auto;
+  }
+/* Sección Body */
+
+ion-content {
+    --background: #124ae2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.row {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: flex-end;
+    height: 100%;
+}
+
+#main-row {
+    display: flex;
+}
+
+.main-title-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+    margin-bottom: auto;
+}
+
+.join-us-icon {
+    box-shadow: none;
+    clip-path: inset(0px 0px 28px 0px); /* Recorta 1px desde la parte inferior */
+}
+
+.main-title {
+    width: 65%;
+    font-size: 19px;
+    text-align: center;
+    margin-top: 5vh;
+    color: white;
+}
+
+.hidden {
+    display: none;
+}
+
+.custom-select-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#register-button, #login-button {
+    width: 75%;
+    padding: 12px;
+    cursor: pointer;
+    border-radius: 5px;
+    display: flex;
+    letter-spacing: 1px;
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+#register-button {
+    margin-top: 2vh;
+    background-color: rgb(255, 255, 255);
+    color: #124ae2;
+    border: none;
+}
+
+#login-button {
+    background-color: transparent;
+    color: white;
+    border: 1px solid rgb(255, 255, 255);
+}
+
+/* Animaciones */
+@keyframes slideInUp {
+    0% {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+}
+  
+@keyframes slideOutDown {
+    0% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+}
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 10;
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
+}
+  
+.overlay-visible {
+    opacity: 1;
+    transition: opacity 0.5s ease-in;
+}
+  
+#action-sheet {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    z-index: 20;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.slide-in {
+    animation-name: slideInUp;
+}
+  
+.slide-out {
+    animation-name: slideOutDown;
+}
+  
+.hidden {
+    display: none !important;
+}
+  
+.action-sheet-options {
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+}  
+
+.hidden {
+    display: none !important;
+}
+  
+
+.action-sheet.hidden {
+    bottom: -100%;
+}
+
+.action-sheet:not(.hidden) {
+    bottom: 0;
+}
+
+.action-sheet-header {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    border-radius: 10px 10px 0 0;
+    text-align: center;
+}
+
+.option {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 10px;
+    background-color: white;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    margin-bottom: 1.5vh;
+}
+
+.action-sheet-options button.option:hover {
+    background-color: #f0f0f0;
+}
+
+.microsoft-icon {
+    height: 18px !important;
+    height: 18px !important;
+}
+
+.img-icons {
+    margin-right: 1vh;
+    height: 20px;
+    width: 20px;
+}
+
+.text-option {
+    flex: 1;
+    color: rgb(73, 73, 73);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 17px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Sección Footer */
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    font-size: 12px;
+    margin-top: 2vh;
+    line-height: 2.8vh;
+}
+
+.footer-text {
+    width: 70%;
+}
+
+.footer-container a {
+    color: white
+}
+
+.custom-select-container,
+.footer-container {
+  margin-bottom: 10px;
+}

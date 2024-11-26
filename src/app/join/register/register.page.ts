@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { AuthService } from '../../services/auth.services';
+import { AuthService } from '../../services/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -9,7 +10,11 @@ import { AuthService } from '../../services/auth.services';
 })
 export class RegisterPage implements OnInit {
   registerForm!: FormGroup;
-  constructor(private fb: FormBuilder, private authService: AuthService) {}
+  constructor(
+    private fb : FormBuilder, 
+    private authService : AuthService,
+    private router : Router
+  ) {}
 
   ngOnInit() {
     this.registerForm = this.fb.group({
@@ -23,12 +28,13 @@ export class RegisterPage implements OnInit {
       const { email, password } = this.registerForm.value;
       try {
         await this.authService.register(email, password);
-        console.log('User registered successfully:', email);
+        this.router.navigate(['/login']);
+        console.log('Usuario registrado exitosamente:', email);
       } catch (error) {
-        console.error('Registration error:', error);
+        console.error('Error al registrar:', error);
       }
     } else {
-      console.error('Form is invalid');
+      console.error('El formulario es inválido');
     }
   }
 }

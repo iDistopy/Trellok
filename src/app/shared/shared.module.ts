@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
-import { HeaderComponent } from '../header/header.component';
+import { HeaderComponent } from '../components/header/header.component';
 
 
-import { RouterModule } from '@angular/router'; // Importar RouterModule
+import { RouterModule } from '@angular/router';
 
 @NgModule({
-  declarations: [HeaderComponent], // Declaramos el HeaderComponent
+  declarations: [HeaderComponent],
   imports: [CommonModule, IonicModule, RouterModule,],
-  exports: [HeaderComponent], // Lo exportamos para que esté disponible en otros módulos
+  exports: [HeaderComponent],
 })
 export class SharedModule {}

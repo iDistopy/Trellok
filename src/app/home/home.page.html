@@ -6,10 +6,10 @@
         <img class="user-logo" src="https://www.w3schools.com/tags/img_girl.jpg" alt="user-logo">
         <ion-icon class="exit-menu-icon" aria-hidden="true" name="exit-outline" slot="end" (click)="logout()"></ion-icon>
       </div>
-      <h4 class="user-name">{{ userName }}</h4>
-      <span class="user-tag">&#64;{{ userTag }}<br></span>
+      <h4 class="user-name">{{ userData?.user_name }}</h4>
+      <span class="user-tag">{{ userData?.user_tag }}<br></span>
       <span class="user-email">
-        {{ userTag }}
+        {{ userData?.user_email }}
         <ion-icon class="drop-menu-icon" name="chevron-down-outline" slot="end"></ion-icon>
       </span>
     </ion-toolbar>
@@ -29,7 +29,7 @@
       <ion-list>
         <ion-item class="ion-item">
           <ion-icon aria-hidden="true" name="people-outline" slot="start"></ion-icon>
-          <ion-label>Espacio de trabajo de Shoyoz</ion-label>
+          <ion-label>Espacio de trabajo de {{ userData?.user_name }}</ion-label>
           <ion-icon class="ion-icon-list" aria-hidden="true" name="ellipsis-vertical" slot="end"></ion-icon>
         </ion-item>
       </ion-list>

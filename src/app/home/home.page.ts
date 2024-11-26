@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { Router } from '@angular/router';
 import { MenuController } from '@ionic/angular';
+import { UserService } from '../services/user.service';
 
 @Component({
   selector: 'app-home',
@@ -9,17 +10,19 @@ import { MenuController } from '@ionic/angular';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage implements OnInit {
-  userName: string = '';
-  userTag: string = '';
-  userEmail: string = '';
+  userData: any;
 
   constructor(
     private menuCtrl: MenuController,
     private afAuth: AngularFireAuth,
-    private router: Router
+    private router: Router,
+    private userService: UserService
   ) {}
 
-  ngOnInit() {}
+  async ngOnInit() {
+    this.userData = await this.userService.getUserData();
+    console.log('userData:', this.userData);
+  }
 
   async logout() {
     try {

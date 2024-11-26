@@ -28,7 +28,12 @@ const routes: Routes = [
     path: 'login',
     loadChildren: () => import('./join/login/login.module').then( m => m.LoginPageModule),
     canActivate: [guestGuard]
+  },
+  {
+    path: 'settings', 
+    loadChildren: () => import('./settings/settings.module').then(m => m.SettingsModule)
   }
+      
 ];
 
 @NgModule({

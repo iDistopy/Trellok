@@ -1,0 +1,111 @@
+<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Configuración</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- Notificaciones -->
+  <ion-list>
+    <ion-item-divider>
+      <ion-label>Notificaciones</ion-label>
+    </ion-item-divider>
+    <ion-item lines="none">
+      <ion-button class="button-text" fill="clear">Abrir configuración del sistema</ion-button>
+    </ion-item>
+  </ion-list>
+
+  <!-- Tema de la Aplicación -->
+   <!-- Tema de la Aplicación -->
+   <ion-list>
+    <ion-item-divider>
+      <ion-label>Tema de la aplicación</ion-label>
+    </ion-item-divider>
+    <ion-item lines="none">
+      <ion-label>Seleccionar tema</ion-label>
+      <ion-select slot="end" placeholder="Claro">
+        <ion-select-option value="light">Claro</ion-select-option>
+        <ion-select-option value="dark">Oscuro</ion-select-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+
+  <!-- Accesibilidad -->
+  <ion-list>
+    <ion-item-divider>
+      <ion-label>Accesibilidad</ion-label>
+    </ion-item-divider>
+    <ion-item lines="none">
+      <ion-label>Modo apto para daltónicos</ion-label>
+      <ion-toggle class="button-text" slot="end" ></ion-toggle>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-label>Habilitar las animaciones</ion-label>
+      <ion-toggle class="button-text" slot="end" ></ion-toggle>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-label>Mostrar nombres de etiqueta</ion-label>
+      <ion-toggle class="button-text" slot="end"></ion-toggle>
+    </ion-item>
+  </ion-list>
+
+  <!-- Sincronización -->
+  <ion-list>
+    <ion-item-divider>
+      <ion-label>Sincronización</ion-label>
+    </ion-item-divider>
+    <ion-item lines="none">
+      <ion-button class="button-text" fill="clear">Cola de sincronización</ion-button>
+    </ion-item>
+  </ion-list>
+
+  <!-- General -->
+  <ion-list>
+    <ion-item-divider>
+      <ion-label>General</ion-label>
+    </ion-item-divider>
+    <ion-item lines="none">
+      <ion-button class="button-text" fill="clear">Perfil y visibilidad</ion-button>
+    </ion-item>
+
+    <ion-item lines="none">
+      <ion-button class="button-text" fill="clear">Establecer idioma de la aplicación</ion-button>
+    </ion-item>
+
+    <ion-item lines="none">
+      <ion-label>Mostrar añadido rápido</ion-label>
+      <ion-toggle class="button-text" slot="end" checked></ion-toggle>
+    </ion-item>
+
+    <ion-item lines="none">
+      <ion-button class="button-text" slot="start" fill="clear">Eliminar cuenta</ion-button>
+    </ion-item>
+
+    <ion-item lines="none">
+      <ion-button class="button-text" slot="start" fill="clear">Acerca de Trello</ion-button>
+    </ion-item>
+
+    <ion-item lines="none">
+      <ion-button class="button-text" slot="start" fill="clear">Más aplicaciones de Atlassian</ion-button>
+    </ion-item>
+
+    <ion-item lines="none">
+      <ion-button class="button-text" slot="start" fill="clear">Ponte en contacto con el servicio de asistencia</ion-button>
+    </ion-item>
+
+    <ion-item lines="none"  class="gestion-cuentas">
+      <ion-button class="button-text" slot="start" fill="clear">Gestionar cuentas de navegador</ion-button>
+      <ion-label>Revisar las cuentas que tengan la sesion iniciada y quitarlas del navegador</ion-label>
+    </ion-item>
+
+    <ion-item lines="none">
+      <ion-button class="button-text" slot="start" fill="clear">Cerrar Sesion</ion-button>
+    </ion-item>
+
+  </ion-list>
+</ion-content>

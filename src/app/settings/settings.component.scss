@@ -1,0 +1,15 @@
+*{
+    font-family: 'Roboto';
+}
+
+.button-text{
+    color:black;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+ion-item .gestion-cuentas{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}

@@ -32,6 +32,10 @@ const routes: Routes = [
   {
     path: 'settings', 
     loadChildren: () => import('./settings/settings.module').then(m => m.SettingsModule)
+  },
+  {
+    path: 'offline-boards', 
+    loadChildren: () => import('./offline-boards/offline-boards.module').then(m => m.OfflineBoardsModule)
   }
       
 ];

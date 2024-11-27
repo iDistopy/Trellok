@@ -16,7 +16,7 @@ export class HomePage implements OnInit {
     private menuCtrl: MenuController,
     private afAuth: AngularFireAuth,
     private router: Router,
-    private userService: UserService
+    private userService: UserService,
   ) {}
 
   async ngOnInit() {
@@ -34,7 +34,4 @@ export class HomePage implements OnInit {
     }
   }
 
-  cerrarMenu() {
-    this.menuCtrl.close();
-  }
 }

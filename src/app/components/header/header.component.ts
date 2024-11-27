@@ -1,9 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MenuController } from '@ionic/angular';
 
-
-
-
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -23,5 +20,4 @@ export class HeaderComponent  implements OnInit {
   cerrarMenu() {
     this.menuCtrl.close();
   }
-
 }

@@ -33,7 +33,24 @@ const routes: Routes = [
     path: 'settings', 
     loadChildren: () => import('./settings/settings.module').then(m => m.SettingsModule),
     canActivate: [authGuard]
+  },
+  {
+    path: 'create-board',
+    loadChildren: () => import('./create-board/create-board.module').then( m => m.CreateBoardPageModule),
+    canActivate: [authGuard]
+  },
+  {
+    path: 'boards',
+    loadChildren: () => import('./boards/boards.module').then( m => m.BoardsPageModule),
+    canActivate: [authGuard]
+  },
+  {
+    path: 'board/:id',
+    loadChildren: () => import('./board/board.module').then( m => m.BoardPageModule),
+    canActivate: [authGuard]
   }
+
+
       
 ];
 

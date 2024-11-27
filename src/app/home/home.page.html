@@ -3,7 +3,7 @@
   <ion-header>
     <ion-toolbar class="ion-title-tab">
       <div class="top-content-menu">
-        <img class="user-logo" src="https://www.w3schools.com/tags/img_girl.jpg" alt="user-logo">
+        <img class="user-logo" src="{{ userData?.profile_pic }}" alt="user-logo">
         <ion-icon class="exit-menu-icon" aria-hidden="true" name="exit-outline" slot="end" (click)="logout()"></ion-icon>
       </div>
       <h4 class="user-name">{{ userData?.user_name }}</h4>
@@ -18,9 +18,9 @@
   <ion-content class="ion-padding">
     <div class="ion-main-content">
       <ion-list class="tab-list">
-        <ion-item class="ion-item item-tab-list" [routerLink]="['/home']" (click)="cerrarMenu()">
+        <ion-item class="ion-item item-tab-list">
           <img aria-hidden="true" src="../../assets/icon/logo_colored.png" class="icon-tabs" alt="logo-icon">
-          <ion-label class="label-tabs">Tableros</ion-label>
+          <ion-label class="label-tabs" [routerLink]="['/boards']">Tableros</ion-label>
         </ion-item>
       </ion-list>
 
@@ -91,7 +91,7 @@
         <img class="person-home-two" src="../../assets/icon/home/person-1-home.svg" alt="person-home-icon-1">
         <h4 class="title-no-tabs">¿Nadie te acompaña aún?</h4>
         <span class="desc-no-tabs">Crea un tablero para empezar y compártelo luego con colaboradores.</span>
-        <ion-button id="create-first-tab-btn">Crea tu primer tablero de Trellok</ion-button>
+        <ion-button id="create-first-tab-btn" [routerLink]="['/create-board']">Crea tu primer tablero de Trellok</ion-button>
       </div>
     </ion-content>
 </div>

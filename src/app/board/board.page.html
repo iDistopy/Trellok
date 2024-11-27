@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{ boardName }}</ion-title>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon slot="icon-only" name="filter-outline"></ion-icon>
+      </ion-button>
+      <ion-button>
+        <ion-icon slot="icon-only" name="notifications-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="categories-carousel">
+    <!-- Mostrar categorías existentes -->
+    <div *ngFor="let category of categories" class="category-card">
+      <div class="category-header">
+        <h3>{{ category.name }}</h3>
+      </div>
+      <div class="cards-container">
+        <!-- Mostrar las tarjetas de cada categoría -->
+        <div *ngFor="let card of category.cards" class="card-item">
+          {{ card.name }}
+        </div>
+        <!-- Botón para añadir una tarjeta -->
+        <button class="add-list-button" (click)="addCard(category.id)">
+          + Añadir tarjeta
+        </button>
+      </div>
+    </div>
+  
+    <!-- Botón para añadir una nueva categoría -->
+    <div class="add-category-button">
+      <button class="add-list-button" (click)="startAddingCategory()">
+        + Añadir lista
+      </button>
+    </div>
+  </div>
+  
+  <!-- Modal para añadir una categoría -->
+  <div *ngIf="isAddingCategory" class="modal">
+    <ion-input
+      placeholder="Nombre de la categoría"
+      [(ngModel)]="categoryName"
+    ></ion-input>
+    <div class="actions">
+      <ion-button fill="outline" color="danger" (click)="cancelAddingCategory()">
+        ❌
+      </ion-button>
+      <ion-button fill="solid" color="primary" (click)="saveCategory()">
+        ✔️
+      </ion-button>
+    </div>
+  </div>  
+</ion-content>
